@@ -1,0 +1,233 @@
+/* Hero yellow background shape */
+.hero-section {
+  position: relative;
+  background: #fff;
+  overflow: visible;
+}
+.hero-bg-yellow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 60vh;
+  background: #fffbe6;
+  border-bottom-left-radius: 120px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Decorative dots in triangle */
+.hero-dots {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+}
+.hero-dots::before, .hero-dots::after {
+  content: '';
+  position: absolute;
+  background: #ffd966;
+  border-radius: 50%;
+}
+.hero-dots::before {
+  width: 16px; height: 16px; left: 0; top: 0;
+  box-shadow:
+    32px 32px 0 0 #ffd966,
+    64px 64px 0 0 #ffd966,
+    96px 96px 0 0 #ffd966;
+}
+.hero-dots::after {
+  width: 16px; height: 16px; left: 96px; top: 0;
+  box-shadow:
+    -32px 32px 0 0 #ffd966,
+    -64px 64px 0 0 #ffd966;
+}
+
+/* Triangle dots PNG image positioning */
+.hero-dots-img {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  width: 120px; /* Adjust size as needed */
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Custom grid layout for hero section images */
+.hero-grid-layout {
+  display: grid;
+  grid-template-columns: 220px 220px 160px 160px;
+  grid-template-rows: 60px 220px 100px 100px 60px;
+  gap: 18px 18px;
+  position: relative;
+  margin: 0 auto;
+  width: max-content;
+}
+
+/* Top left text above main image */
+.hero-text.hero-use-mixed {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: end;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Main large image (Card 1) */
+.img1 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.img1 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* "Learn more" button below main image */
+.hero-learn-btn {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+  justify-self: center;
+  align-self: start;
+  width: 180px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 24px;
+  padding: 12px 0;
+  background: #a259ff;
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(44,62,80,.08);
+  transition: background 0.2s;
+}
+.hero-learn-btn:hover { background: #7c3aed; }
+
+/* Card 1-6 aligned with the text */
+.img7 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: start;
+  justify-self: end;
+  width: 100px;
+  height: 100px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.img7 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Card 1-1 above the small cards */
+.img2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.img2 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Card 1-2 */
+.img3 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.img3 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Card 1-3, overlapping next column */
+.img4 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.img4 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Top right text above final cards */
+.hero-text.hero-multipurpose {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  align-self: start;
+  font-size: 1.05rem;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Card 1-4 */
+.img5 {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.img5 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Card 1-5 */
+.img6 {
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.img6 img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Image captions */
+.hero-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 0 0 12px 12px;
+}
+.hero-caption.bottom { bottom: 0; }
+.hero-caption.top { top: 0; border-radius: 12px 12px 0 0; }
+
+/* Highlight for "fine" word */
+.highlight-fine {
+  color: #ff4e4e;
+  background: #c2f5f5;
+  border-radius: 18px;
+  padding: 0 10px;
+  font-weight: 900;
+}
+
+/* Purple button style */
+.btn-purple {
+  background: #a259ff;
+  color: #fff;
+  border: none;
+}
+.btn-purple:hover, .btn-purple:focus {
+  background: #7c3aed;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .hero-grid-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10, 100px);
+    gap: 10px;
+    width: 100%;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7 { width: 100%; height: 100px; }
+}
+
+@media (max-width: 767.98px) {
+  .contact-form { display: none !important; }
+}
